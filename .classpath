@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
 	<classpathentry kind="src" path="src"/>
-	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/jre1.8.0_191">
-		<attributes>
-			<attribute name="owner.project.facets" value="java"/>
-		</attributes>
-	</classpathentry>
 	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.USER_LIBRARY/EclipseLink 2.5.2">
 		<attributes>
 			<attribute name="owner.project.facets" value="jpt.jpa"/>
 		</attributes>
 	</classpathentry>
 	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.USER_LIBRARY/Database Library"/>
+	<classpathentry exported="true" kind="lib" path="D:/Suyog/JPADevnagari.git/jar_files/commonj.sdo-2.1.1.jar"/>
+	<classpathentry exported="true" kind="lib" path="D:/Suyog/JPADevnagari.git/jar_files/eclipselink-2.5.2.jar"/>
+	<classpathentry exported="true" kind="lib" path="D:/Suyog/JPADevnagari.git/jar_files/javax.persistence-2.2.0-release.jar"/>
+	<classpathentry exported="true" kind="lib" path="D:/Suyog/JPADevnagari.git/jar_files/mysql.jar"/>
+	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>

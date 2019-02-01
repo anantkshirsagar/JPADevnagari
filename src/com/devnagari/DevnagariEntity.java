@@ -1,5 +1,6 @@
 package com.devnagari;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -12,6 +13,7 @@ public class DevnagariEntity {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private int id;
+	@Column(columnDefinition = "TEXT")
 	private String devnagariText;
 
 	public DevnagariEntity(int id, String devnagariText) {
@@ -19,9 +21,14 @@ public class DevnagariEntity {
 		this.setDevnagariText(devnagariText);
 	}
 	
-	public DevnagariEntity() {
-		
-	}
+	/*public class LocalMysqlDialect extends MySQL5InnoDBDialect {
+	    @Override
+	    public String getTableTypeString() {
+	        return " ENGINE=InnoDB DEFAULT CHARSET=utf8";
+	    }
+	}*/
+	
+	public DevnagariEntity() {}
 	
 	public int getId() {
 		return id;
