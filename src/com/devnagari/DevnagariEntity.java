@@ -11,7 +11,8 @@ import javax.persistence.Table;
 @Table
 public class DevnagariEntity {
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "id", updatable = false, nullable = false)
 	private int id;
 	@Column(columnDefinition = "TEXT")
 	private String devnagariText;
@@ -20,16 +21,17 @@ public class DevnagariEntity {
 		this.id = id;
 		this.setDevnagariText(devnagariText);
 	}
-	
-	/*public class LocalMysqlDialect extends MySQL5InnoDBDialect {
-	    @Override
-	    public String getTableTypeString() {
-	        return " ENGINE=InnoDB DEFAULT CHARSET=utf8";
-	    }
-	}*/
-	
-	public DevnagariEntity() {}
-	
+
+	/*
+	 * public class LocalMysqlDialect extends MySQL5InnoDBDialect {
+	 * 
+	 * @Override public String getTableTypeString() { return
+	 * " ENGINE=InnoDB DEFAULT CHARSET=utf8"; } }
+	 */
+
+	public DevnagariEntity() {
+	}
+
 	public int getId() {
 		return id;
 	}
@@ -46,5 +48,4 @@ public class DevnagariEntity {
 		this.devnagariText = devnagariText;
 	}
 
-	
 }

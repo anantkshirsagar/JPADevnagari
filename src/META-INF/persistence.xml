@@ -13,9 +13,9 @@
 				value="root" />
 			<property name="javax.persistence.jdbc.driver"
 				value="com.mysql.jdbc.Driver" />
-			<property
+			<!-- <property
 				name="eclipselink.jdbc.property.sendStringParametersAsUnicode"	
-				value="true" />
+				value="true" /> -->
 			<!-- <property name="javax.persistence.jdbc.characterEncoding">utf8</property> 
 				<property name="javax.persistence.jdbc.useUnicode">true</property> <property 
 				name="javax.persistence.jdbc.charSet">UTF-8</property> -->
