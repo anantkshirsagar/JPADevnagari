@@ -9,7 +9,7 @@ import javax.persistence.Persistence;
 public class StoreDevnagari {
 	public static void main(String[] args) {
 		StoreDevnagari.storeDevnagariData();
-		StoreDevnagari.retrieveDevnagariData();
+		//StoreDevnagari.retrieveDevnagariData();
 		StoreDevnagari.fetchList();
 	}
 
@@ -28,10 +28,10 @@ public class StoreDevnagari {
 	public static void retrieveDevnagariData() {
 		EntityManagerFactory emfactory = Persistence.createEntityManagerFactory("JPADevnagari");
 		EntityManager entitymanager = emfactory.createEntityManager();
-		DevnagariEntity employee = entitymanager.find(DevnagariEntity.class, 106);
+		DevnagariEntity devnagariEntity = entitymanager.find(DevnagariEntity.class, 106);
 
-		System.out.println("employee ID = " + employee.getId());
-		System.out.println("employee NAME = " + employee.getDevnagariText());
+		System.out.println(" ID = " + devnagariEntity.getId());
+		System.out.println(" TEXT = " + devnagariEntity.getDevnagariText());
 	}
 
 	public static void storeDevnagariData() {
@@ -52,18 +52,35 @@ public class StoreDevnagari {
 	}
 }
 
+//-----------------------------------------------------------------------------------------------------
 /*
- * Not Useful CREATE DATABASE `devnagari` DEFAULT CHARACTER SET utf8 COLLATE
- * utf8_general_ci; USE `devnagari`;
+ * Steps to create database:
+ * 
+ * Go to cmd line or MySQL workbench and run the following command.
+ * > create database devnagari;
+ * > use devnagari;
+ * 
+ * Here your database is created. Run the file StoreDevnagari.java file your data will get stored into
+ * "devnagarientity" table. This table is automatically get created by the JPA. You do no need to create
+ * this table in the database manually.
+ * 
+ * Question: How JPA recognizes the table name.
+ * Table name is nothing but the POJO class name. In your database table is created automatically with
+ * the POJO class's name.
+ * 
+ */
+
+//-----------------------------------------------------------------------------------------------------
+/*
+ * Following code is not Useful 
+ * CREATE DATABASE `devnagari` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci; USE `devnagari`;
  * 
  * Use This to set table encoding properties -> ALTER TABLE tablename CONVERT TO
  * CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
  * 
  * OR
  * 
- * CREATE DATABASE `devnagari` DEFAULT CHARACTER SET utf8mb4 COLLATE
- * utf8mb4_unicode_ci; USE `devnagari`;=>this works fine no need to mention
- * uncoding in mysql url
+ * CREATE DATABASE `devnagari` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci; USE `devnagari`;=>this works fine no need to mention uncoding in mysql url
  * 
  * 
  * 

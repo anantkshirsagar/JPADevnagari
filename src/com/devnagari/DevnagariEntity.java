@@ -22,13 +22,6 @@ public class DevnagariEntity {
 		this.setDevnagariText(devnagariText);
 	}
 
-	/*
-	 * public class LocalMysqlDialect extends MySQL5InnoDBDialect {
-	 * 
-	 * @Override public String getTableTypeString() { return
-	 * " ENGINE=InnoDB DEFAULT CHARSET=utf8"; } }
-	 */
-
 	public DevnagariEntity() {
 	}
 
