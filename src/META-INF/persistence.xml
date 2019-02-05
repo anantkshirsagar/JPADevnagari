@@ -5,12 +5,20 @@
 	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
 	<persistence-unit name="JPADevnagari">
 		<!-- Following class: com.devnagari package -->
-		<class>com.devnagari.DevnagariEntity</class>
+		<!-- <class>com.devnagari.DevnagariEntity</class> -->
 
 		<!-- Following class: com.relationship package -->
-		<class>com.relationship.Department</class>
-		<class>com.relationship.Employee</class>
+		<!-- <class>com.relationship.Department</class> -->
+		<!-- <class>com.relationship.Employee</class> -->
 
+		<!-- Following class: com.inheritance package -->
+		<!-- <class>com.inheritance.CategoryEntity</class> -->
+		<!-- <class>com.inheritance.AbstractCategory</class> -->
+
+		<!-- Following class: com.categorylist package -->
+		<class>com.categorylist.AbstractCategory</class>
+		<class>com.categorylist.Category</class>
+		
 		<properties>
 
 			<!-- Following URL: "devnagari" => database -->
@@ -18,10 +26,17 @@
 				/> -->
 				
 			<!-- Following URL: "relationship" => database -->
-			<property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3309/relationship?createDatabaseIfNotExist=true&amp;autoReconnect=true&amp;useUnicode=yes&amp;characterEncoding=UTF-8&amp;cachePrepStmts=true&amp;prepStmtCacheSize=250&amp;prepStmtCacheSqlLimit=2048&amp;useServerPrepStmts=true" 
+			<!-- <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3309/relationship?createDatabaseIfNotExist=true&amp;autoReconnect=true&amp;useUnicode=yes&amp;characterEncoding=UTF-8&amp;cachePrepStmts=true&amp;prepStmtCacheSize=250&amp;prepStmtCacheSqlLimit=2048&amp;useServerPrepStmts=true" 
+				/> -->
+				
+			<!-- Following URL: "inheritance" => database -->
+			<!-- <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3309/inheritance?createDatabaseIfNotExist=true&amp;autoReconnect=true&amp;useUnicode=yes&amp;characterEncoding=UTF-8&amp;cachePrepStmts=true&amp;prepStmtCacheSize=250&amp;prepStmtCacheSqlLimit=2048&amp;useServerPrepStmts=true" 
+				/> -->
+
+			<!-- Following URL: "categorylist" => database -->
+			<property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3309/categorylist?createDatabaseIfNotExist=true&amp;autoReconnect=true&amp;useUnicode=yes&amp;characterEncoding=UTF-8&amp;cachePrepStmts=true&amp;prepStmtCacheSize=250&amp;prepStmtCacheSqlLimit=2048&amp;useServerPrepStmts=true" 
 				/>
 
-			<!-- <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3309/devnagari"/> -->
 			<property name="javax.persistence.jdbc.user" value="root" />
 			<property name="javax.persistence.jdbc.password"
 				value="root" />
